@@ -1,1 +1,242 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Taller introductorio a Wikimedia Commons</title>
+<style>
+:root{--ink:#172b4d;--blue:#2864dc;--cyan:#38bfc4;--coral:#ed765f;--paper:#f5f7fb;--muted:#64748b;--line:#dce4ee;--green:#27886b}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:#263449;font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}
+header{background:var(--ink);color:#fff;padding:clamp(2rem,7vw,5.5rem) max(1.25rem,calc((100vw - 1000px)/2))}
+header .eyebrow{color:#75e0df;text-transform:uppercase;letter-spacing:.13em;font-weight:750;font-size:.78rem}
+h1{font-size:clamp(2.3rem,5.5vw,4.2rem);line-height:1.06;max-width:850px;margin:.8rem 0 1rem}
+header p{max-width:720px;color:#d6e0ef;font-size:1.15rem}
+.flyer{margin:1.8rem 0 0;max-width:420px;padding:.55rem;background:#fff;box-shadow:9px 9px 0 var(--coral);transform:rotate(-1deg)}
+.flyer img{display:block;width:100%;height:auto}
+.flyer figcaption{font-size:.8rem;color:#475569;padding:.45rem .2rem .1rem;text-align:center}
+@media(max-width:560px){.flyer{max-width:100%;margin-top:1.4rem;transform:none}}
+main{max-width:1000px;margin:auto;padding:1.5rem 1.25rem 4rem}
+section{background:white;border:1px solid var(--line);border-radius:18px;padding:clamp(1.2rem,3vw,2rem);margin:1.25rem 0;box-shadow:0 5px 18px #172b4d08}
+h2{font-size:1.65rem;line-height:1.2;color:var(--ink);margin:.1rem 0 1rem}
+h3{color:var(--ink);margin:1.1rem 0 .4rem}
+p{margin:.5rem 0 1rem}
+a{color:var(--blue);font-weight:650;text-underline-offset:3px}
+a:focus,button:focus{outline:3px solid var(--cyan);outline-offset:3px}
+.small{font-size:.9rem;color:var(--muted)}
+.pill{display:inline-block;padding:.28rem .65rem;border-radius:999px;background:#e7efff;color:var(--blue);font-size:.8rem;font-weight:750}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.card{border:1px solid var(--line);border-radius:13px;padding:1rem;background:#fbfcfe}
+.card strong{display:block;color:var(--ink);font-size:1.08rem;margin-bottom:.3rem}
+.timeline{display:grid;grid-template-columns:100px 1fr;gap:.85rem 1rem;align-items:start}
+.time{background:#e8efff;color:var(--blue);padding:.4rem .55rem;border-radius:8px;font-weight:800;text-align:center;font-size:.9rem}
+.timeline p{margin:.2rem 0}
+.callout{border-left:5px solid var(--cyan);background:#effafa;padding:1rem 1.1rem;border-radius:0 12px 12px 0;margin:1rem 0}
+.warning{border-left-color:var(--coral);background:#fff4f0}
+ol,ul{padding-left:1.4rem}
+li{padding-left:.2rem;margin:.35rem 0}
+.checklist label{display:flex;gap:.7rem;align-items:flex-start;padding:.45rem 0;border-bottom:1px solid #edf1f6}
+.checklist input{margin-top:.4rem;accent-color:var(--blue);transform:scale(1.15)}
+.checklist label:has(input:checked) span{text-decoration:line-through;color:var(--muted)}
+table{border-collapse:collapse;width:100%;margin:.8rem 0}
+th,td{text-align:left;padding:.7rem;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:#f3f6fb;color:var(--ink)}
+.links{display:flex;flex-wrap:wrap;gap:.7rem;margin:.8rem 0}
+.links a{display:inline-block;border:1px solid var(--line);border-radius:9px;padding:.7rem .9rem;text-decoration:none;background:#fff}
+footer{max-width:1000px;margin:auto;padding:0 1.25rem 2.5rem;color:var(--muted);font-size:.9rem}
+@media(max-width:560px){.timeline{grid-template-columns:82px 1fr}th,td{padding:.5rem;font-size:.92rem}}
+@media print{body{background:white;font-size:11pt}header{padding:1.5rem;background:white;color:var(--ink)}header p{color:#334155}main{padding:0;max-width:none}section{box-shadow:none;break-inside:avoid;margin:.5rem 0;padding:1rem}a{color:#1749a5}footer{padding:1rem 0}}
+</style>
+</head>
+<body>
+<header>
+  <div class="eyebrow">Taller práctico · 105 minutos</div>
+  <h1>Fotografiar la ciudad, compartir conocimiento</h1>
+  <p>Introducción a Wikimedia Commons con una salida fotográfica por el centro de Córdoba. Usaremos principalmente la aplicación Commons y WikiShootMe como alternativa para localizar elementos que necesitan imágenes.</p>
+  <p><strong>Idea central:</strong> encontrar lo que falta, fotografiarlo y publicar imágenes útiles con información y licencia adecuadas.</p>
+  <figure class="flyer">
+    <a href="https://librebase.org.ar/wp-content/uploads/2026/10/flyer-cc25-save-the-date.png" target="_blank" rel="noopener" aria-label="Abrir el flyer del evento Creative Commons 25 años">
+      <img src="https://librebase.org.ar/wp-content/uploads/2026/10/flyer-cc25-save-the-date.png" alt="Flyer del evento Creative Commons 25 años, compartido por LibreBase" loading="lazy">
+    </a>
+    <figcaption>Referencia visual: evento Creative Commons · 25 años, LibreBase</figcaption>
+  </figure>
+</header>
+<main>
+<section>
+  <span class="pill">01 · Objetivos</span>
+  <h2>¿Qué vamos a hacer?</h2>
+  <ul>
+    <li>Conocer Wikimedia Commons como repositorio de imágenes y otros archivos reutilizables bajo licencias libres.</li>
+    <li>Localizar lugares y elementos que no tienen una imagen asociada.</li>
+    <li>Usar la aplicación Commons para tomar o seleccionar fotografías y cargarlas.</li>
+    <li>Aprender lo básico sobre títulos, descripciones, ubicación, licencias y categorías.</li>
+    <li>Retomar la experiencia de carga de escuelas realizada este año y ampliar la documentación visual de la ciudad.</li>
+  </ul>
+</section>
 
+<section>
+  <span class="pill">02 · Cronograma</span>
+  <h2>105 minutos, de principio a fin</h2>
+  <div class="timeline">
+    <div class="time">10 min</div><div><strong>Introducción a Commons</strong><p>Qué es, para qué sirve y qué podemos aportar.</p></div>
+    <div class="time">15 min</div><div><strong>Explorar elementos faltantes</strong><p>Demostración de la aplicación Commons y alternativa con WikiShootMe.</p></div>
+    <div class="time">10 min</div><div><strong>Preparar la salida</strong><p>Cuenta, licencias, pautas de fotografía y organización de equipos.</p></div>
+    <div class="time">40 min</div><div><strong>Salida fotográfica</strong><p>Recorrido a pie, identificación de objetivos y toma de fotografías.</p></div>
+    <div class="time">25 min</div><div><strong>Carga y categorización</strong><p>Subir al menos una imagen por equipo o dejarla lista para cargar.</p></div>
+    <div class="time">5 min</div><div><strong>Cierre</strong><p>Revisar resultados, dificultades y próximos pasos.</p></div>
+  </div>
+</section>
+
+<section>
+  <span class="pill">03 · Herramientas</span>
+  <h2>Aplicación Commons: herramienta principal</h2>
+  <p>La aplicación móvil de Wikimedia Commons permite seleccionar fotografías de la galería o tomar nuevas, completar la información del archivo y subirlo al repositorio. También puede ayudar a explorar lugares cercanos que necesitan imágenes.</p>
+  <div class="links">
+    <a href="https://commons-app.github.io/" target="_blank" rel="noopener">Sitio oficial de la aplicación ↗</a>
+    <a href="https://commons.wikimedia.org/" target="_blank" rel="noopener">Wikimedia Commons ↗</a>
+  </div>
+  <div class="callout"><strong>Antes del taller:</strong> comprobar la disponibilidad e instalación de la aplicación en los teléfonos del grupo. Si alguien no puede instalarla o utiliza un dispositivo no compatible, puede tomar las fotos y subirlas luego desde el navegador.</div>
+  <h3>Alternativa: WikiShootMe</h3>
+  <p>WikiShootMe es un mapa útil para explorar elementos de Wikidata sin imagen asociada y fotografías geolocalizadas. Sirve especialmente para decidir qué fotografiar antes de iniciar el recorrido.</p>
+  <div class="links"><a href="https://wikishootme.toolforge.org/" target="_blank" rel="noopener">Abrir WikiShootMe ↗</a></div>
+  <div class="callout warning"><strong>Importante:</strong> un punto rojo suele indicar que el elemento de Wikidata no tiene imagen asociada a la propiedad correspondiente. No significa necesariamente que no exista ninguna fotografía del lugar en Commons. Comprobarlo antes de tomar una nueva imagen.</div>
+</section>
+
+<section>
+  <span class="pill">04 · Actividad guiada · 15 minutos</span>
+  <h2>Encontrar qué fotografiar</h2>
+  <ol>
+    <li><strong>Probar la aplicación Commons.</strong> Abrir la app y explorar si ofrece lugares cercanos que necesitan fotografías.</li>
+    <li><strong>Usar WikiShootMe si hace falta.</strong> Buscar Córdoba, Argentina, y acercarse al área del centro.</li>
+    <li><strong>Seleccionar un punto.</strong> Abrir el elemento y comprobar el nombre, la ubicación y las imágenes existentes.</li>
+    <li><strong>Elegir un objetivo alcanzable.</strong> En parejas, seleccionar uno o dos lugares para el recorrido.</li>
+    <li><strong>Anotar el nombre correcto.</strong> Esta información servirá para el título y la descripción de la fotografía.</li>
+  </ol>
+  <p class="small">El mapa orienta la búsqueda, pero no es un inventario perfecto. Si el punto es incorrecto, el lugar no es accesible o ya tiene buenas imágenes, elegir otro objetivo.</p>
+</section>
+
+<section>
+  <span class="pill">05 · Preparación · 10 minutos</span>
+  <h2>Antes de salir</h2>
+  <div class="checklist" id="checklist">
+    <label><input type="checkbox"><span>Crear una cuenta Wikimedia o verificar que se puede iniciar sesión.</span></label>
+    <label><input type="checkbox"><span>Instalar y probar la aplicación Commons cuando sea posible.</span></label>
+    <label><input type="checkbox"><span>Llevar el teléfono con batería y espacio para fotografías.</span></label>
+    <label><input type="checkbox"><span>Acordar un recorrido y un punto de encuentro.</span></label>
+    <label><input type="checkbox"><span>Organizarse en parejas y elegir uno o dos objetivos por equipo.</span></label>
+  </div>
+  <h3>Pautas para las fotografías</h3>
+  <ul>
+    <li>Tomar una vista general que permita reconocer el edificio o elemento.</li>
+    <li>Fotografiar detalles relevantes si aportan información.</li>
+    <li>Buscar nitidez, buena iluminación y un encuadre claro.</li>
+    <li>Comprobar que la ubicación del teléfono sea razonablemente precisa.</li>
+    <li>Evitar datos personales visibles y no fotografiar personas identificables como motivo principal sin considerar su privacidad.</li>
+    <li>Respetar la vía pública, los accesos y las actividades de las instituciones.</li>
+  </ul>
+</section>
+
+<section>
+  <span class="pill">06 · Salida fotográfica · 40 minutos</span>
+  <h2>La misión: documentar, no solo sacar fotos</h2>
+  <p>Los equipos recorren el área acordada y utilizan el mapa como guía. Pueden fotografiar escuelas, edificios históricos, monumentos, esculturas, plazas, bibliotecas, centros culturales u otros espacios de interés público.</p>
+  <div class="grid">
+    <div class="card"><strong>01 · Vista general</strong>Una imagen clara del edificio, monumento o espacio.</div>
+    <div class="card"><strong>02 · Detalles</strong>Placas, fachadas, esculturas, entradas o rasgos distintivos.</div>
+    <div class="card"><strong>03 · Contexto</strong>Una toma adicional que ayude a entender el lugar.</div>
+  </div>
+  <p>Antes de cada toma, verificar que el elemento coincida con el punto del mapa. Anotar su nombre correcto y cualquier dato útil para describirlo.</p>
+  <div class="callout">Si hay conexión, se puede probar una carga durante el recorrido. Si no, guardar las fotografías y hacer la publicación al regresar. Es preferible documentar bien pocos elementos que acumular imágenes repetidas.</div>
+</section>
+
+<section>
+  <span class="pill">07 · Carga guiada · 25 minutos</span>
+  <h2>Crear una cuenta y subir fotografías</h2>
+  <h3>Crear una cuenta Wikimedia</h3>
+  <ol>
+    <li>Ingresar a <a href="https://commons.wikimedia.org/" target="_blank" rel="noopener">Wikimedia Commons</a> y seleccionar «Crear una cuenta».</li>
+    <li>Elegir un nombre de usuario y una contraseña; no es obligatorio usar el nombre real.</li>
+    <li>Agregar un correo de recuperación si se desea.</li>
+    <li>Iniciar sesión en la aplicación Commons con esa cuenta.</li>
+  </ol>
+  <h3>Subir desde la aplicación Commons</h3>
+  <ol>
+    <li>Seleccionar una fotografía de la galería o tomar una nueva.</li>
+    <li>Completar un título claro que identifique el elemento y su ubicación.</li>
+    <li>Agregar una descripción precisa de lo que muestra la imagen.</li>
+    <li>Revisar la fecha y las coordenadas, si están disponibles.</li>
+    <li>Seleccionar una licencia libre compatible.</li>
+    <li>Agregar categorías sugeridas y verificar que correspondan a la foto.</li>
+    <li>Confirmar la carga y abrir la página del archivo para comprobar el resultado.</li>
+  </ol>
+  <h3>Alternativa desde una computadora</h3>
+  <p>Si la app no está disponible o resulta difícil usarla, entrar al <a href="https://commons.wikimedia.org/wiki/Special:UploadWizard" target="_blank" rel="noopener">UploadWizard</a> para completar la carga desde el navegador.</p>
+</section>
+
+<section>
+  <span class="pill">08 · Metadatos</span>
+  <h2>Cómo titular y describir una imagen</h2>
+  <div class="card">
+    <strong>Ejemplo de título</strong>
+    Fachada de [nombre del edificio], Córdoba, Argentina.
+    <strong style="margin-top:1rem">Ejemplo de descripción</strong>
+    Vista de la fachada de [nombre del edificio], ubicado en [dirección o barrio], ciudad de Córdoba, Argentina. Fotografía tomada en [mes y año, si se conoce].
+  </div>
+  <p>Reemplazar los campos entre corchetes por información verificada. Evitar títulos genéricos como «IMG_1234» o «Foto del centro». Los metadatos ayudan a que otras personas encuentren, comprendan y reutilicen el archivo.</p>
+</section>
+
+<section>
+  <span class="pill">09 · Licencias y categorías</span>
+  <h2>Publicar con responsabilidad y ordenar bien</h2>
+  <h3>Licencias libres</h3>
+  <ul>
+    <li>Subir fotografías propias y elegir una licencia libre compatible, por ejemplo Creative Commons Atribución-CompartirIgual (CC BY-SA).</li>
+    <li>No cargar fotografías ajenas sin autorización válida o una base legal que lo permita.</li>
+    <li>Considerar privacidad, derechos de imagen y posibles restricciones sobre obras protegidas que aparezcan en la fotografía.</li>
+  </ul>
+  <p>Consultar la <a href="https://commons.wikimedia.org/wiki/Commons:Licensing/es" target="_blank" rel="noopener">guía de licencias de Commons</a>.</p>
+  <h3>Categorías</h3>
+  <p>Las categorías organizan las fotografías por tema, lugar, institución o tipo de objeto. Buscar primero si ya existe una categoría adecuada, comprobar su nombre y elegir solo las que describan realmente la imagen.</p>
+  <table>
+    <thead><tr><th>Fotografía</th><th>Término orientativo para buscar</th></tr></thead>
+    <tbody>
+      <tr><td>Escuela</td><td><code>Schools in Córdoba, Argentina</code></td></tr>
+      <tr><td>Edificio</td><td><code>Buildings in Córdoba, Argentina</code></td></tr>
+      <tr><td>Monumento</td><td><code>Monuments and memorials in Córdoba, Argentina</code></td></tr>
+      <tr><td>Calle</td><td><code>Streets in Córdoba, Argentina</code></td></tr>
+    </tbody>
+  </table>
+  <p class="small">Son términos orientativos, no una garantía de que esas categorías existan exactamente con ese nombre. Verificar antes de asignarlas y preferir las categorías específicas pertinentes.</p>
+  <p>Para explorar categorías: <a href="https://commons.wikimedia.org/wiki/Special:CategoryTree" target="_blank" rel="noopener">árbol de categorías de Commons</a>.</p>
+</section>
+
+<section>
+  <span class="pill">10 · Cierre · 5 minutos</span>
+  <h2>¿Qué cambió en el mapa?</h2>
+  <p>Cada equipo comparte brevemente su experiencia y revisa si las imágenes se publicaron correctamente o quedaron listas para una carga posterior.</p>
+  <ul>
+    <li>¿Qué elementos logramos identificar y fotografiar?</li>
+    <li>¿Pudimos cargar las imágenes con título, descripción, licencia y categorías?</li>
+    <li>¿Qué dificultades encontramos al usar la app o el mapa?</li>
+    <li>¿Qué otros lugares podemos documentar en una próxima salida?</li>
+  </ul>
+  <div class="callout"><strong>Una contribución útil:</strong> fotografía propia + información clara + licencia libre + categorías pertinentes.</div>
+</section>
+
+<section>
+  <span class="pill">Enlaces útiles</span>
+  <h2>Acceso rápido</h2>
+  <div class="links">
+    <a href="https://commons.wikimedia.org/" target="_blank" rel="noopener">Wikimedia Commons ↗</a>
+    <a href="https://commons-app.github.io/" target="_blank" rel="noopener">Aplicación Commons ↗</a>
+    <a href="https://wikishootme.toolforge.org/" target="_blank" rel="noopener">WikiShootMe ↗</a>
+    <a href="https://commons.wikimedia.org/wiki/Special:UploadWizard" target="_blank" rel="noopener">UploadWizard ↗</a>
+    <a href="https://commons.wikimedia.org/wiki/Commons:Licensing/es" target="_blank" rel="noopener">Licencias ↗</a>
+    <a href="https://commons.wikimedia.org/wiki/Special:CategoryTree" target="_blank" rel="noopener">Categorías ↗</a>
+  </div>
+</section>
+</main>
+<footer>Material de apoyo para un taller introductorio a Wikimedia Commons · Córdoba, Argentina. Verificar las opciones actuales de la aplicación, las políticas de Commons y las categorías antes de la actividad.</footer>
+</body>
+</html>
