@@ -67,9 +67,25 @@
     .text-link::after { content: "↗"; font-size: 1.1em; }
     section { padding: 76px 0; border-top: 1px solid var(--line); }
     .section-heading {
-      display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 36px; margin-bottom: 42px;
+      display: grid; grid-template-columns: 1fr; gap: 12px; margin-bottom: 42px;
     }
-    .section-kicker { color: var(--blue); margin: 8px 0 0; }
+    .section-kicker {
+      color: var(--blue);
+      margin: 0;
+      font-family: var(--sans);
+      font-size: clamp(1.35rem, 2.8vw, 2rem);
+      font-weight: 800;
+      letter-spacing: -.045em;
+      line-height: 1.1;
+      padding: 0 0 12px;
+      border-bottom: 4px solid var(--blue);
+      display: inline-block;
+      width: fit-content;
+    }
+    .section-kicker::first-line { font-weight: 800; }
+    @media (max-width: 760px) {
+      .section-kicker { font-size: clamp(1.25rem, 5vw, 1.6rem); padding-bottom: 10px; border-bottom-width: 3px; }
+    }
     h2 { font-size: clamp(2rem, 4.5vw, 4rem); letter-spacing: -.065em; line-height: 1.02; margin: 0; font-weight: 620; }
     .section-lede { max-width: 680px; color: var(--muted); margin: 18px 0 0; }
     .research-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
@@ -149,7 +165,7 @@
 <body>
   <header class="topbar">
     <div class="wrap topbar-inner">
-      <a class="brand" href="#inicio">AZ<span>.</span> / Investigación</a>
+      
       <nav aria-label="Navegación principal">
         <a href="#investigacion">Investigación</a>
         <a href="#proyectos">Proyectos</a>
@@ -171,7 +187,7 @@
           Sociólogo · Investigador CONICET · Universidad Nacional de Villa María
         </p>
 
-        <h1>Agustín<br><span class="outline">Zanotti.</span></h1>
+        <h2>Agustín<br><span class="outline">Zanotti</span></h2>
 
         <div class="hero-bottom">
           <p class="intro">
@@ -242,7 +258,7 @@
         <div class="section-heading">
           <p class="section-kicker">01 / Investigación</p>
           <div>
-            <h2>Tecnología y vida social.</h2>
+            
             <p class="section-lede">Mi trabajo aborda cómo se producen, circulan y disputan los conocimientos en entornos digitales, y qué oportunidades y desigualdades emergen con las tecnologías contemporáneas.</p>
           </div>
         </div>
@@ -272,7 +288,7 @@
     <div class="section-heading">
       <p class="section-kicker">02 / Proyectos</p>
       <div>
-        <h2>Investigación en práctica.</h2>
+        
         <p class="section-lede">
           Proyectos, materiales y experiencias que conectan la investigación social con herramientas digitales, comunidades y conocimiento abierto.
         </p>
@@ -423,7 +439,7 @@
         <div class="section-heading">
           <p class="section-kicker">03 / Publicaciones</p>
           <div>
-            <h2>Textos y resultados.</h2>
+            
             <p class="section-lede">Una selección de trabajos sobre tecnologías digitales, inteligencia artificial generativa y conocimiento abierto.</p>
           </div>
         </div>
@@ -503,7 +519,7 @@
     <div class="section-heading">
       <p class="section-kicker">04 / Conocimiento abierto</p>
       <div>
-        <h2>El conocimiento se construye en común.</h2>
+        
         <p class="section-lede">
           Participo en iniciativas que promueven la circulación abierta del
           conocimiento, la documentación colaborativa y la representación
