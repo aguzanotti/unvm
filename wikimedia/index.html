@@ -65,6 +65,18 @@ footer{max-width:1000px;margin:auto;padding:1.5rem 1.25rem 2.5rem;color:var(--mu
 @media(max-width:560px){.photo-card img{height:180px}.section-banner{align-items:flex-start}}
 @media print{body{background:white;font-size:11pt}header{padding:1.5rem;background:white;color:var(--ink)}header p{color:#334155}main{padding:0;max-width:none}section{box-shadow:none;break-inside:avoid;margin:.5rem 0;padding:1rem}a{color:#1749a5}footer{padding:1rem 0}}
 </style>
+
+<style>
+.qr-access{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:1.5rem;align-items:center;background:#f8e8f0;border:3px solid #080808;box-shadow:7px 7px 0 #9cc849;padding:clamp(1.2rem,4vw,2rem);margin:1.5rem 0}
+.qr-access h2{margin:.65rem 0 .7rem}
+.qr-access p{overflow-wrap:anywhere}
+.qr-frame{display:flex;flex-direction:column;align-items:center;gap:.5rem;padding:1rem;background:#fff;border:2px solid #080808;box-shadow:5px 5px 0 #df8ab6;text-decoration:none;color:#111}
+.qr-frame img{display:block;width:clamp(170px,22vw,240px);height:auto;aspect-ratio:1;image-rendering:pixelated}
+.qr-frame span{font-weight:900;text-transform:uppercase;font-size:.78rem;letter-spacing:.04em}
+@media(max-width:620px){.qr-access{grid-template-columns:1fr}.qr-frame{justify-self:center}}
+@media print{.qr-access{break-inside:avoid;print-color-adjust:exact;-webkit-print-color-adjust:exact}}
+</style>
+
 </head>
 <body>
 <header>
@@ -80,20 +92,22 @@ footer{max-width:1000px;margin:auto;padding:1.5rem 1.25rem 2.5rem;color:var(--mu
   </figure>
 </header>
 <main>
-<section>
-  <span class="pill">01 · Objetivos</span>
-  <h2>¿Qué vamos a hacer?</h2>
-  <ul>
-    <li>Conocer Wikimedia Commons como repositorio de imágenes y otros archivos reutilizables bajo licencias libres.</li>
-    <li>Localizar lugares y elementos que no tienen una imagen asociada.</li>
-    <li>Usar la aplicación Commons para tomar o seleccionar fotografías y cargarlas.</li>
-    <li>Aprender lo básico sobre títulos, descripciones, ubicación, licencias y categorías.</li>
-    <li>Retomar la experiencia de carga de escuelas realizada este año y ampliar la documentación visual de la ciudad.</li>
-  </ul>
+
+<section id="qr-acceso" class="qr-access" aria-labelledby="qr-title">
+  <div class="qr-copy">
+    <span class="pill">Acceso rápido</span>
+    <h2 id="qr-title">Escaneá y abrí el taller</h2>
+    <p>Usá la cámara del celular para abrir la guía del taller, consultar los pasos de la actividad y acceder a los recursos durante la caminata fotográfica.</p>
+    <p><a href="https://aguzanotti.github.io/unvm/wikimedia/" target="_blank" rel="noopener noreferrer">https://aguzanotti.github.io/unvm/wikimedia/</a></p>
+  </div>
+  <a class="qr-frame" href="https://aguzanotti.github.io/unvm/wikimedia/" target="_blank" rel="noopener noreferrer" aria-label="Abrir la página del taller">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAE4CAIAAABAHXg9AAAFhklEQVR42u3dQa7bSAxF0SjQ/rf8M0hP1UEBpB5pnzMO/BXZFyWAqNL18/PzC5jtt1sAQgWECkIFhAoIFYQKCBUQKggVECoIFRAqIFQQKiBUQKggVECogFBBqIBQQajAFHfVB13XteI//HSO8dP1V/37qvt2ej2pzzn9/3bft2m/NysqePQFhAoIFYQKCBWECox2d/+B1PtXp83ZuueTp58zbZ5ZdT2f+nuzooJHX0CoIFRAqIBQQajAq+7UH66aO6XmjVW693Om9tl2f1/bf29WVPDoCwgVECoIFRAqCBUY7XYL/ureV1n1Oan5Z/c8ufv6raiAUAGhglABoYJQAaECB8xR/7NlP2f39afev2peakUFoQJCBYQKQgWECkIFBonNUT91bpY6H/hTr2f7ecJWVPDoCwgVECoIFRAqIFRYqX2OmprXVV1n99yvas6Zup5p+063/N6sqCBUQKiAUEGogFBBqMBoZXPUbzuXNTVfTV3PtN/Dt/3erKggVECoIFRAqIBQQajAq66qeVTVfsUn3efTds8hu/dzdu/DnLZPddr3cnrfrKjg0RcQKiBUECogVBAqMNr6/ajT5sCp93lWzQ+r/n3KlvmqFRU8+gJCBYQKQgWECkIFRiubo37q+zBT88Yt+yS7Vd2H7ffHigoefQGhglABoQJCBaECr7q3XGhqDpY6N/j0eqadM1yle39v9/drRQWPvoBQAaGCUAGhAkKFldrnqKn3gqbOoe0+jzcl9b7TqvvWvU+4+/u1ooJHX0CoIFRAqIBQQajAq75uP+q0811T+0tT39eW9+hO+51YUcGjLyBUECogVECoIFTgVe1z1NQ5sd3vF01df/f3kvr81Pc17b5ZUcGjLyBUECogVECoIFRghGvL3O+JueX/X3/3e0Gr7kPqeqZ9j1ZU8OgLCBWECggVECoIFRhh3Lm+qf2o3fO97nOJt7xnNTWv3jJntqKCR19AqCBUQKiAUEGowAhlc9Rpc7/U50+bv017r+yW+zPt/bpWVPDoCwgVhAoIFRAqCBV41TXtfaRV79U81f0+z6r7WWXaOcPdv6vT+5Cal1pRwaMvIFQQKiBUQKggVGCE+1P/Y6l5bNX8MHVOb/c8PHWfp81Frajg0RcQKiBUECogVBAqMNqV2j+Z2qc67bzZ1D7Y1P7hcQEsma9aUcGjLyBUECogVECoIFTgVbH9qKfzqy1z2tT1dOvejzrtXOWq37P3o4JHX0CogFBBqIBQAaHCSte0udOp1Dmu095fmnpP7Jbvd9rnW1HBoy8gVECoIFRAqCBUYLT2/aip/YpbzptN3Yenz+/eVzntc7acb2xFBY++gFBBqIBQAaGCUIFXXal5VNXnn9ryHtHt5wan3jeb+j1Ufb4VFTz6AkIFoQJCBYQKQgVGuLbs22y/EaH555Mt59lOe29q1fdiPyogVBAqIFRAqCBUQKjw1crO9bX/8J3rmTbfS/1OUuc/p+6nFRU8+gJCBaECQgWECkIFXtX+ftTU3Ck1/9zyvs2q7ys1P/+2fapWVPDoCwgVhAoIFRAqCBV41Z36w6n3nZ5+ztN1ds9Lp52vW3X/Tz9/2jzcub6AUEGogFBBqIBQAaHCV7jdgr+6542nf/dJ9znA01TNabvnnPajAkIFoQJCBaECQgWECh/FHPUfuvfNds/fUte/5XvpnmNbUcGjLyBUQKggVECogFBhpdgcNTWPOr2e1D7VJ9PmolvO9U3Nq+1HBY++gFABoYJQAaECQoWV2ueoW86PTc33tsyTT+9D9/nDqfnt09/1flRAqCBUQKggVECogFDho1zT5niAFRWECggVhAoIFRAqCBUQKiBUECogVECoIFRAqCBUQKiAUEGogFABoYJQAaGCUIHB/gDRbfx414bu/QAAAABJRU5ErkJggg==" alt="Código QR para abrir https://aguzanotti.github.io/unvm/wikimedia/" width="240" height="240" loading="eager">
+    <span>Escaneá este código</span>
+  </a>
 </section>
 
 <section>
-  <span class="pill">Inspiración visual</span>
+  <span class="pill">01 · Inspiración visual</span>
   <h2>Córdoba ya está en Commons. ¿Qué falta documentar?</h2>
   <p>Estas imágenes de Wikimedia Commons muestran ejemplos de documentación visual de la ciudad. Durante el taller vamos a buscar otros edificios, detalles y espacios que puedan enriquecer el archivo libre.</p>
   <div class="photo-gallery">
@@ -196,31 +210,7 @@ footer{max-width:1000px;margin:auto;padding:1.5rem 1.25rem 2.5rem;color:var(--mu
 </section>
 
 <section>
-  <span class="pill">07 · Carga guiada · 25 minutos</span>
-  <h2>Crear una cuenta y subir fotografías</h2>
-  <h3>Crear una cuenta Wikimedia</h3>
-  <ol>
-    <li>Ingresar a <a href="https://commons.wikimedia.org/" target="_blank" rel="noopener">Wikimedia Commons</a> y seleccionar «Crear una cuenta».</li>
-    <li>Elegir un nombre de usuario y una contraseña; no es obligatorio usar el nombre real.</li>
-    <li>Agregar un correo de recuperación si se desea.</li>
-    <li>Iniciar sesión en la aplicación Commons con esa cuenta.</li>
-  </ol>
-  <h3>Subir desde la aplicación Commons</h3>
-  <ol>
-    <li>Seleccionar una fotografía de la galería o tomar una nueva.</li>
-    <li>Completar un título claro que identifique el elemento y su ubicación.</li>
-    <li>Agregar una descripción precisa de lo que muestra la imagen.</li>
-    <li>Revisar la fecha y las coordenadas, si están disponibles.</li>
-    <li>Seleccionar una licencia libre compatible.</li>
-    <li>Agregar categorías sugeridas y verificar que correspondan a la foto.</li>
-    <li>Confirmar la carga y abrir la página del archivo para comprobar el resultado.</li>
-  </ol>
-  <h3>Alternativa desde una computadora</h3>
-  <p>Si la app no está disponible o resulta difícil usarla, entrar al <a href="https://commons.wikimedia.org/wiki/Special:UploadWizard" target="_blank" rel="noopener">UploadWizard</a> para completar la carga desde el navegador.</p>
-</section>
-
-<section>
-  <span class="pill">08 · Metadatos</span>
+  <span class="pill">07 · Metadatos</span>
   <h2>Cómo titular y describir una imagen</h2>
   <div class="card">
     <strong>Ejemplo de título</strong>
@@ -232,7 +222,7 @@ footer{max-width:1000px;margin:auto;padding:1.5rem 1.25rem 2.5rem;color:var(--mu
 </section>
 
 <section>
-  <span class="pill">09 · Licencias y categorías</span>
+  <span class="pill">08 · Licencias y categorías</span>
   <h2>Publicar con responsabilidad y ordenar bien</h2>
   <h3>Licencias libres</h3>
   <ul>
@@ -257,7 +247,7 @@ footer{max-width:1000px;margin:auto;padding:1.5rem 1.25rem 2.5rem;color:var(--mu
 </section>
 
 <section>
-  <span class="pill">10 · Cierre · 5 minutos</span>
+  <span class="pill">9 · Cierre · 5 minutos</span>
   <h2>¿Qué cambió en el mapa?</h2>
   <p>Cada equipo comparte brevemente su experiencia y revisa si las imágenes se publicaron correctamente o quedaron listas para una carga posterior.</p>
   <ul>
